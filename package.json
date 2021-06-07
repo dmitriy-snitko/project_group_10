@@ -1,0 +1,31 @@
+{
+  "name": "project_group_10",
+  "version": "1.1.0",
+  "description": "",
+  "main": "index.js",
+  "homepage": "https://dmitriy-snitko.github.io/project_group_10",
+  "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /project_group_10/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitriy-snitko/project_group_10.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitriy-snitko/project_group_10/issues"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "parcel-plugin-nuke-dist": "^1.0.1",
+    "posthtml-include": "^1.6.2",
+    "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}

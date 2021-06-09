@@ -71,4 +71,4 @@ var e,t=arguments[3];!function(t,r){"object"==typeof exports&&"object"==typeof m
 },{"./movieApiService":"izVC","../templates/moviesGallery.hbs":"vrX0"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=s(require("./js/movieApiService")),r=require("./js/renderMovies");function s(e){return e&&e.__esModule?e:{default:e}}const i=new e.default;(0,r.renderMarkUp)();
 },{"./sass/main.scss":"clu1","./js/movieApiService":"izVC","./js/renderMovies":"P608"}]},{},["Focm"], null)
-//# sourceMappingURL=/project_group_10/src.5ff3ec12.js.map
+//# sourceMappingURL=/project_group_10/src.08b6fdff.js.map

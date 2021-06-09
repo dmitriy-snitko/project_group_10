@@ -1,0 +1,37 @@
+<div class="cardfilm">
+  <img src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}} film-poster" class="film-img">
+</div>
+<div class="film-details">
+  <h1 class="film-title">{{original_title}}</h1>
+  <div class="film-info">
+    <ul class="film-info-list">
+      <li class="film-info-item">
+        <p class="film-info-title">Vote / Votes</p>
+        <p class="film-info-vote"><span>{{vote_average}}</span>/<span>{{vote_count}}</span>
+        </p>
+      </li>
+      <li class="film-info-item">
+        <p class="film-info-title">Popularity</p>
+        <p class="film-info-popularity">{{popularity}}</p>
+      </li>
+      <li class="film-info-item">
+        <p class="film-info-title">Original Title</p>
+        <p class="film-info-movie-name">{{original_title}}</p>
+      </li>
+      <li class="film-info-item">
+        <p class="film-info-title">Genre</p>
+        <ul class="film-info-genre-list list">
+          {{#each genres}}
+          <li class="film-info-genre-item">{{this.name}}<span>,&nbsp;</span></li>
+          {{/each}}
+      </li>
+    </ul>
+  </div>
+  <p class="film-description-title">About</p>
+  <p class="film-description">{{overview}}</p>
+  <div class="film-btn-box">
+    <button type="button" class="button-film-btn" id="watchedModalBtn" data-watched="addToList">add to
+      watched</button>
+    <button type="button" class="button-film-btn" id="queueModalBtn" data-queue="addToList">add to queue</button>
+  </div>
+</div>

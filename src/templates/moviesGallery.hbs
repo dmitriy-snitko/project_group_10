@@ -1,0 +1,28 @@
+<ul class='movies-list list'>
+  {{#each this}}
+    <li class='movies-list__item'>
+      <div class='img-container'>
+        <img
+          class='movie-img'
+          src="https://www.themoviedb.org/t/p/w220_and_h330_face{{poster_path}}"
+          alt=''
+        />
+      </div>
+      <div>
+        <h2 class='movie-title'>
+          {{title}}
+        </h2>
+        <p class='movie-descr'>
+          {{genre_ids}}|
+          <span class='movie-release'>
+            {{release_date}}
+          </span>
+
+          <span class='movie-rating'>
+            {{vote_average}}
+          </span>
+        </p>
+      </div>
+    </li>
+  {{/each}}
+</ul>

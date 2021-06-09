@@ -39,17 +39,22 @@
   align-items: center;
 }
 
-.logo {
+.home-page-logo {
   display: flex;
   margin-top: 46px;
   align-items: center;
+
+  &:hover,
+  &:focus {
+    scroll-behavior: smooth;
+  }
 
   @media screen and (min-width: 768px) {
     margin-top: 40px;
   }
 }
 
-.logo-text {
+.home-page-logo-text {
   display: none;
 
   @media screen and (min-width: 768px) {
@@ -97,11 +102,11 @@
   }
 }
 
-.header-search-form {
+.home-page-search-form {
   position: relative;
 }
 
-.search-input {
+.home-page-search-input {
   display: block;
   margin: 0 auto;
   padding: 0%;
@@ -142,14 +147,11 @@
   }
 }
 
-.btn {
+.home-page-search-btn {
+  position: absolute;
   padding: 0;
   margin: 0;
   border: none;
-}
-
-.header-search-form-btn {
-  position: absolute;
   background-color: transparent;
   bottom: 2px;
   right: 0;
@@ -162,7 +164,3 @@
     right: 274px;
   }
 }
-
-// .search-btn-icon {
-
-// }

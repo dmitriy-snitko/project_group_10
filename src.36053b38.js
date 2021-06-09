@@ -63,4 +63,4 @@ module.exports=require("./lib/axios");
 },{"axios":"dZBD"}],"Focm":[function(require,module,exports) {
 "use strict";require("./sass/main.scss");var e=s(require("./js/movieApiService"));function s(e){return e&&e.__esModule?e:{default:e}}const r=new e.default;
 },{"./sass/main.scss":"clu1","./js/movieApiService":"izVC"}]},{},["Focm"], null)
-//# sourceMappingURL=/project_group_10/src.bc697229.js.map
+//# sourceMappingURL=/project_group_10/src.36053b38.js.map

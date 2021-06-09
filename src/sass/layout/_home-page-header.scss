@@ -3,11 +3,33 @@
   background-color: rgba(0, 0, 0, 0.56);
 
   background-image: url(../images/header/mobile/home-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
     background-image: url(../images/header/mobile/home-bg@2x.jpg);
+  }
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/header/tablet/home-bg.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/header/tablet/home-bg@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: url(../images/header/desktop/home-bg.jpg);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/header/desktop/home-bg@2x.jpg);
+    }
   }
 }
 
@@ -18,13 +40,26 @@
 }
 
 .logo {
+  display: flex;
   margin-top: 46px;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 40px;
+  }
 }
 
-// .logo-icon {
-//   //   width: 24px;
-//   //   height: 24px;
-// }
+.logo-text {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 10px;
+    font-size: 30px;
+    line-height: 1.166;
+    color: var(--main-light-color);
+  }
+}
 
 .home-page-nav-list {
   display: flex;
@@ -67,6 +102,8 @@
 }
 
 .search-input {
+  display: block;
+  margin: 0 auto;
   padding: 0%;
   margin-top: 40px;
   width: 280px;
@@ -99,6 +136,10 @@
     border: none;
     border-bottom: 0.5px solid var(--main-light-color);
   }
+
+  @media screen and (min-width: 768px) {
+    width: 336px;
+  }
 }
 
 .btn {
@@ -112,6 +153,14 @@
   background-color: transparent;
   bottom: 2px;
   right: 0;
+
+  @media screen and (min-width: 768px) {
+    right: 142px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    right: 274px;
+  }
 }
 
 // .search-btn-icon {

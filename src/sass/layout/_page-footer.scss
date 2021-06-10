@@ -1,52 +1,46 @@
-.footer {
+footer {
+  display: block;
+  margin: 0 auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #f7f7f7;
+  color: #545454;
+  font-weight: normal;
+}
+
+.footer-text {
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hurd-icon {
+  margin-left: 3px;
+  margin-right: 3px;
+  color: #ff6b08;
+}
+
+.students-link {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-text {
+    font-size: 16px;
+    line-height: 1.18;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-text {
+    @include font(14px, 400, 16px);
+  }
+
+  .copyright {
     display: block;
-    margin: 0 auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    text-align: center;
-    background-color: #F7F7F7;
-    color:#545454;
-    font-weight: normal;
-  } 
-
-.footer-text{
-    align-items: center;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-.hurd-icon{
-    margin-left: 3px;
-    margin-right: 3px;
-    color: #FF6B08;
-  }
-
-.students-link{
-    cursor: pointer;
-    text-decoration: underline;
-  }
-
-  .footer-text br{
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    .footer-text{
-      font-size: 16px ;
-      line-height: 1.18;
+    margin-bottom: 7px;
   }
 }
-
-  @media screen and (max-width: 767px) {
-    .footer-text{
-      font-size: 14px;
-      line-height: 1.8;
-  }
-  .footer-text br{
-    display: initial;
-  }
-
-}
-
-

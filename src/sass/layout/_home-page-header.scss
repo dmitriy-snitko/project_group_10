@@ -1,9 +1,13 @@
 .home-page-header {
-  background-color: rgba(0, 0, 0, 0.56);
+  background-color: #000;
+}
+
+.home-page-header-container {
+  height: 230px;
 
   background-image: url(../images/header/mobile/home-bg.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -30,10 +34,6 @@
       background-image: url(../images/header/desktop/home-bg@2x.jpg);
     }
   }
-}
-
-.home-page-header-container {
-  height: 230px;
 }
 
 .home-page-nav-container {

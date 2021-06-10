@@ -2,6 +2,11 @@
 
 @import './base/common.scss';
 @import './base/container.scss';
+
 @import './utils/variables';
+@import './utils/mixins';
+@import './utils/visually-hidden';
+
 @import './layout/home-page-header';
+@import './layout/movies-gallery.scss';
 @import './layout/page-footer.scss';

@@ -1,9 +1,15 @@
 import './sass/main.scss';
 
 import MovieApiService from './js/movieApiService';
+import getMovieListWithGenresName from './js/getGenresName';
+
 import renderHomePageHeader from './js/homePageHeader';
+import { renderMovieList } from './js/renderMarckup';
 
-const movieApiService = new MovieApiService();
+export const movieApiService = new MovieApiService();
 
-// renderHomePageHeader();
+movieApiService.fetchTrendingMovies()
+  .then(getMovieListWithGenresName)
+  .then(renderMovieList)
+  .catch(error => console.log(error ));
 

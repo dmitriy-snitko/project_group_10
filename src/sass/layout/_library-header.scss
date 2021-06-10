@@ -1,17 +1,4 @@
-.header-section-lib {
-  padding-top: 58px;
-  color: #ffffff;
-}
-@media screen and (max-width: 767px) {
-  .logo-name {
-    display: none;
-  }
-}
 .library-page-header-container {
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 320px;
-  min-height: 230px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.56), rgba(0, 0, 0, 0.56)),
     url('../images/header/mobile/library-bg.jpg');
   background-color: #000;
@@ -49,9 +36,25 @@
       url('../images/header/desktop/library-bg@2x.jpg');
   }
 }
+.header-section-lib {
+  color: #ffffff;
+  height: 230px;
+}
+.logo-name {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 10px;
+    font-size: 30px;
+    line-height: 1.166;
+    color: var(--main-light-color);
+  }
+}
+
 .storage {
   display: flex;
   justify-content: space-between;
+  margin-top: 49px;
   @media screen and (min-width: 768px) {
     justify-content: center;
   }
@@ -95,18 +98,59 @@
   color: var(--main-light-color);
 }
 .library-page-nav-list {
-  margin-bottom: 51px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  // padding-top: 46px;
+  font-style: normal;
 }
+
 .nav-item .link {
+  line-height: 1.166;
+  text-transform: uppercase;
   color: var(--main-light-color);
+}
+.nav-item:not(:last-child) {
+  margin-right: 39px;
+}
+.nav-link {
+  position: relative;
+  color: var(--main-light-color);
+  &:hover,
+  &:focus {
+    scroll-behavior: smooth;
+  }
+  &.is-current {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background-color: var(--accent-color);
+    }
+  }
 }
 .navigation {
   display: flex;
-  margin-left: 21px;
+  justify-content: space-between;
+  align-items: baseline;
 }
 .navigation-logo {
-  margin-right: 112px;
-}
-.library-page-nav-list {
   display: flex;
+  margin-top: 46px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.171;
+  &:hover,
+  &:focus {
+    scroll-behavior: smooth;
+  }
+}
+.navigation-logo:hover .logo-icon,
+.navigation-logo:focus .logo-icon {
+  background-color: var(--main-light-color);
+  // color: var(--main-light-color);
 }

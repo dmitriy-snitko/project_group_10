@@ -6,13 +6,19 @@ const refs = {
     homePageBody: document.querySelector('body'),
 }
 
-console.log(refs);
+// window.addEventListener('load', (e) => {
+//     e.preventDefault();
+//     refs.homePageBody.insertAdjacentHTML('afterbegin', homePageHeaderTemplate());
+// })
+
 
 refs.homePageLogo.addEventListener('click', renderHomePageHeader);
 refs.homePageLink.addEventListener('click', renderHomePageHeader);
 
 
-export default function renderHomePageHeader() {
-    refs.homePageBody.innerHTML = homePageHeaderTemplate;
-    console.log(homePageHeaderTemplate);
+export default function renderHomePageHeader(e) {
+    e.preventDefault();
+    refs.homePageBody.innerHTML = homePageHeaderTemplate();
+    console.log(homePageHeaderTemplate());
 }
+

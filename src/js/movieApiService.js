@@ -8,18 +8,25 @@ axios.defaults.baseURL = 'https://api.themoviedb.org/3';
 export default class MovieApiService {
   constructor() {
     this.page = 1;
-    this.searchQuery = '';
   }
 
   fetchTrendingMovies() {
-   return axios.get(`/trending/movie/day?api_key=${API_KEY}&page=${this.page}`);
+   return axios.get(`/trending/movie/day?api_key=${API_KEY}&page=${this.page}`)
+    .then(({ data }) => data.results);
   };
 
   fetchMoviesByKeyWords(searchQuery) {
-    return axios.get(`search/movie?api_key=${API_KEY}&query=${searchQuery}&page=${this.page}`);
+    return axios.get(`search/movie?api_key=${API_KEY}&query=${searchQuery}&page=${this.page}`)
+      .then(({ data }) => data.results);
   }
 
   fetchMoviesById(id) {
-    return axios.get(`/movie/${id}?api_key=${API_KEY}`);
+    return axios.get(`/movie/${id}?api_key=${API_KEY}`)
+    .then(({ data }) => data);
+  }
+
+  fetchGenres() {
+    return axios.get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
+    .then(({ data }) => data.genres);
   }
 }

@@ -1,28 +1,17 @@
-<ul class='movies-list list'>
-  {{#each this}}
-    <li class='movies-list__item'>
-      <div class='img-container'>
-        <img
-          class='movie-img'
-          src="https://www.themoviedb.org/t/p/w220_and_h330_face{{poster_path}}"
-          alt=''
-        />
-      </div>
-      <div>
-        <h2 class='movie-title'>
-          {{title}}
-        </h2>
-        <p class='movie-descr'>
-          {{genre_ids}}|
-          <span class='movie-release'>
-            {{release_date}}
-          </span>
+<div class="container">
+  <ul class="movie-list list">
+    {{#each this}}
+    <li class="movie">
+      <img class="movie-poster"
+        src="{{#if this.poster_path}}https://image.tmdb.org/t/p/w342{{poster_path}}{{/if}}"
+        alt="{{original_title}}">
 
-          <span class='movie-rating'>
-            {{vote_average}}
-          </span>
-        </p>
-      </div>
+      <h2 class="movie-title">{{original_title}}</h2>
+      <p class="movie-descrition">
+        {{#each genre_ids}}{{this}}, {{/each}}| {{release_date}}
+        <span class="movie-rating visually-hidden">{{vote_average}}</span>
+      </p>
     </li>
-  {{/each}}
-</ul>
+    {{/each}}
+  </ul>
+</div>

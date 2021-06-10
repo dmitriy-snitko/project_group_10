@@ -1,0 +1,127 @@
+.modal{
+    &-title{
+        margin-bottom: 15px;
+        text-align: center;
+        @media screen and (max-width: 767px) {
+            font-size: 20px;
+          }
+        @media screen and (min-width: 768px) {
+            font-size: 30px;
+          }
+     
+    }
+    &-window {
+        color: var(--footer-text-color);
+        position: absolute;
+        z-index: 1000;
+        left: 50%;
+        transform: translate( -50%);
+        width: 280px;
+     
+
+      
+        background-color: #ffffff;
+        background-repeat: no-repeat;
+        background-position: bottom -1px right;
+        background-size: 83%;
+        // box-shadow: 0px -5px 26px 5px rgb(224 135 17 / 60%);
+      
+        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+        .backdrop.is-hidden & {
+          opacity: 0;
+          transform: translate(-50%, -50%);
+          transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+        }
+      
+        @media screen and (max-height: 572px) {
+          top: 10px;
+          transform: translate(-50%, 0);
+        }
+        @media screen and (max-width: 767px) {
+        padding: 20px;
+    }
+
+        @media screen and (min-width: 768px) {
+          width: 618px;
+          padding: 30px;
+        }
+      }
+      
+      &-close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        margin: 0;
+        padding: 0;
+        margin-left: auto;
+        margin-bottom: 10px;
+    
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+}
+
+.close-btn-icon {
+    stroke: var(--footer-text-color);
+
+    &:hover,
+    &:focus {
+        stroke: var(--accent-color);
+    }
+  }
+
+  
+.project-team{
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+    text-align: center;
+    align-items: center;
+
+}
+
+
+.team-photo{
+    border-radius: 50%;
+    cursor: pointer;
+    @media screen and (min-width: 768px) {
+        width: 200px;
+        margin-right: 100px;
+      }
+
+    @media screen and (max-width: 767px) {
+        width: 100px;
+        margin-right: 30px;
+      }
+
+      &:hover,
+      :focus{
+        background-color: var(--accent-color);
+        box-shadow: 37px 0px 31px -6px rgba(250, 118, 0, 0.38);
+        transition:  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      }
+}
+
+.position-name{
+    padding-bottom: 10px;
+    color: var(--accent-color);
+    
+    @media screen and (min-width: 768px) {
+        font-size: 20px;
+      }
+    @media screen and (max-width: 767px) {
+        font-size: 17px;
+      }
+}
+
+.student-name{
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+      }
+    @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+}

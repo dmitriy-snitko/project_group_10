@@ -25,6 +25,13 @@ footer {
 .students-link {
   cursor: pointer;
   text-decoration: underline;
+
+  &:hover,
+  :focus{
+    color: var(--accent-color);
+    box-shadow: 0px 0px 100px 6px rgb(231, 113, 9);
+    transition:  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
 }
 
 @media screen and (min-width: 768px) {

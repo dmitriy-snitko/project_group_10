@@ -1,5 +1,4 @@
-.home-page-header-container {
-  height: 230px;
+.home-page-header {
   background-color: rgba(0, 0, 0, 0.56);
 
   background-image: url(../images/header/mobile/home-bg.jpg);
@@ -31,6 +30,10 @@
       background-image: url(../images/header/desktop/home-bg@2x.jpg);
     }
   }
+}
+
+.home-page-header-container {
+  height: 230px;
 }
 
 .home-page-nav-container {

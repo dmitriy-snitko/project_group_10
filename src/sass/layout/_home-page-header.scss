@@ -38,25 +38,25 @@
 
 .home-page-nav-container {
   display: flex;
+  padding-top: 46px;
   justify-content: space-between;
   align-items: center;
 }
 
 .home-page-logo {
   display: flex;
-  margin-top: 46px;
   align-items: center;
 
-  &:hover,
-  &:focus {
-    scroll-behavior: smooth;
-  }
-
-  @media screen and (min-width: 768px) {
-    margin-top: 40px;
+  &:hover .home-page-logo-icon,
+  &:focus .home-page-logo-icon {
+    stroke: #b0b0b0;
   }
 }
 
+.home-page-logo-icon {
+  transition: all 0.15s ease-in-out;
+  stroke: #818181;
+}
 .home-page-logo-text {
   display: none;
 
@@ -64,6 +64,7 @@
     display: block;
     margin-left: 10px;
     font-size: 30px;
+    font-weight: 500;
     line-height: 1.166;
     color: var(--main-light-color);
   }
@@ -71,7 +72,6 @@
 
 .home-page-nav-list {
   display: flex;
-  padding-top: 58px;
 }
 
 .home-page-nav-list-item {

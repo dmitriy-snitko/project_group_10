@@ -1,32 +1,31 @@
-<div class="header-section-lib container">
+<div class="lib-page-header container">
     <nav class="navigation">
-        <a href="#" class="navigation-logo logo link" id='logo' aria-label="Логотип сайта">
-            <svg class="logo-icon" width="24" height="24">
-                <use href="{{this}}#icon-film"></use>
+        <a href="#" class="logo link" data-link="home" aria-label="Логотип сайта">
+            <svg class="logo-icon" data-link="home" width="24" height="24">
+                <use href="{{this}}#icon-film" data-link="home"></use>
             </svg>
-            <span class="logo-name">Filmoteka</span>
+            <h1 class="logo-text" data-link="home">Filmoteka</h1>
         </a>
-        <ul class="library-page-nav-list list">
-            <li class="nav-item">
-                <a href="#" class="nav-link link" id="home-btn">home</a>
+        <ul class="navigation-list list">
+            <li class="navigation-item">
+                <a href="#" class="navigation-link link" data-link="home">Home</a>
             </li>
-            <li class="nav-item">
-                <a href="#" class="nav-link is-current link" id="lib-btn">my library</a>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link current link" data-link="lib">My library</a>
             </li>
         </ul>
     </nav>
-        <ul class="storage js-choice-storage">
-            <li class="storage-item list">
-                <label class="storage-label">
-                    <input type="radio" name="storage-btn" value="Watched" class="storage-input visuallyhidden"
-                        checked />
-                    <span class="storage-btn">Watched</span>
+        <ul class="lib-nav list">
+            <li class="lib-nav-item">
+                <label class="lib-nav-label">
+                    <input type="radio" name="lib-nav-btn" value="Watched" class="lib-nav-input visually-hidden" checked />
+                    <span class="lib-nav-btn">Watched</span>
                 </label>
             </li>
-            <li class="storage-item list">
-                <label class="storage-label">
-                    <input type="radio" name="storage-btn" value="Queue" class="storage-input visuallyhidden" />
-                    <span class="storage-btn">Queue</span>
+            <li class="lib-nav-item">
+                <label class="lib-nav-label">
+                    <input type="radio" name="lib-nav-btn" value="Queue" class="lib-nav-input visually-hidden" />
+                    <span class="lib-nav-btn">Queue</span>
                 </label>
             </li>
         </ul>

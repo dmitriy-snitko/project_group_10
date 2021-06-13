@@ -1,3 +1,63 @@
-.paginationjs {
+.paginationjs-prev {
+  // color: rebeccapurple;
+}
+
+#pagination-container {
+  // margin-left: 100px;
+}
+
+.paginationjs .paginationjs-pages ul {
   display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.paginationjs-page {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: var(--main-text-color);
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.33;
+  list-style: none;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  list-style: none;
+  color: black;
+}
+
+.paginationjs-prev {
+  background: #f7f7f7;
+  // background-image: url(/src/images/icons/sprite.svg#icon-arrow-left);
+}
+
+.paginationjs-next {
+  background: #f7f7f7;
+}
+
+.active {
+  background: #ff6b08;
+  border-radius: 5px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 13px;
+  padding-right: 13px;
+}
+
+.movie-list {
+  margin-bottom: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-list {
+    margin-bottom: 50px;
+  }
 }

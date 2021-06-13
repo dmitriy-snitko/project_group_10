@@ -20,3 +20,5 @@ movieApiService
   .catch(error => console.log(error));
 
 refs.header.addEventListener('click', onPageHeaderClick);
+
+import pagination from './js/pagination';

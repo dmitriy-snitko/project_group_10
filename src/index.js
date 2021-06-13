@@ -13,7 +13,8 @@ export const movieApiService = new MovieApiService();
 
 renderHeader(homePageHeaderMarckup);
 
-movieApiService.fetchTrendingMovies()
+movieApiService
+  .fetchTrendingMovies()
   .then(getMovieListWithGenresName)
   .then(renderMovieList)
   .catch(error => console.log(error));

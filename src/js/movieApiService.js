@@ -1,9 +1,8 @@
 import axios from 'axios';
 
-const API_KEY = 'ec2decab2c803075323649cd6bc24f80'
+const API_KEY = 'ec2decab2c803075323649cd6bc24f80';
 
 axios.defaults.baseURL = 'https://api.themoviedb.org/3';
-
 
 export default class MovieApiService {
   constructor() {
@@ -11,22 +10,32 @@ export default class MovieApiService {
   }
 
   fetchTrendingMovies() {
-   return axios.get(`/trending/movie/day?api_key=${API_KEY}&page=${this.page}`)
-    .then(({ data }) => data.results);
-  };
+    return axios
+      .get(`/trending/movie/day?api_key=${API_KEY}&page=${this.page}`)
+      .then(({ data }) => data.results);
+  }
 
   fetchMoviesByKeyWords(searchQuery) {
-    return axios.get(`search/movie?api_key=${API_KEY}&query=${searchQuery}&page=${this.page}`)
+    return axios
+      .get(`search/movie?api_key=${API_KEY}&query=${searchQuery}&page=${this.page}`)
       .then(({ data }) => data.results);
   }
 
   fetchMoviesById(id) {
-    return axios.get(`/movie/${id}?api_key=${API_KEY}`)
-    .then(({ data }) => data);
+    return axios.get(`/movie/${id}?api_key=${API_KEY}`).then(({ data }) => data);
   }
 
   fetchGenres() {
-    return axios.get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
-    .then(({ data }) => data.genres);
+    return axios
+      .get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
+      .then(({ data }) => data.genres);
+  }
+
+  fetchTotalNumber() {
+    return axios
+      .get(`/trending/movie/day?api_key=${API_KEY}&page=${this.page}`)
+      .then(({ data }) => {
+        return data.total_pages;
+      });
   }
 }

@@ -92,6 +92,8 @@ header {
     text-transform: uppercase;
     color: var(--main-light-color);
 
+    transition: color 0.15s ease-in-out;
+
     &.current {
       &::after {
         content: '';
@@ -102,6 +104,10 @@ header {
         height: 3px;
         background-color: var(--accent-color);
       }
+    }
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
     }
   }
 }

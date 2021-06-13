@@ -11,3 +11,4 @@ export function renderMovieList(movieList) {
 export function renderHeader(headerMarckup) {
   refs.header.innerHTML = headerMarckup(sprite);
 }
+

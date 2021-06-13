@@ -10,9 +10,11 @@
   // opacity: 1;
 
   &.is-hidden {
+    pointer-events: none;
     opacity: 0;
   }
   &.is-open {
+    pointer-events: inherit;
     opacity: 1;
   }
 }

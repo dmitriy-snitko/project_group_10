@@ -1,8 +1,6 @@
-<div class="container">
-  <ul class="movie-list list">
     {{#each this}}
     <li class="movie">
-      <img class="movie-poster"
+      <img class="movie-poster" data-id="{{id}}"
         src="{{#if this.poster_path}}https://image.tmdb.org/t/p/w342{{poster_path}}{{/if}}"
         alt="{{original_title}}">
 
@@ -13,5 +11,3 @@
       </p>
     </li>
     {{/each}}
-  </ul>
-</div>

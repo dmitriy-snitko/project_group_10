@@ -1,4 +1,5 @@
-export default {
-  main: document.querySelector('main'),
-  header: document.querySelector('header'),
+export default {  
+    movieList: document.querySelector('.movie-list'),
+    header: document.querySelector('.header'),
+    searchForm: document.querySelector('.search-form'),
 }

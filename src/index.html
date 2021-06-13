@@ -14,9 +14,23 @@
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц.
     <include src="./partials/example.html"></include> -->
-    <header></header>
+    <header>
+      <div class="header"></div>
+        <form class="search-form" id="home-page-search-form">
+          <input class="search-form-input" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
+          <button type="submit" class="search-form-submit-btn">
+          <svg width="12px" height="12px">
+            <use href="./images/icons/sprite.svg#icon-search"></use>
+          </svg>
+          </button>
+        </form>
+    </header>
 
-    <main></main>
+    <main>
+      <div class="container">
+        <ul class="movie-list list"></ul>
+      </div>
+    </main>
 
    <footer>
     <include src="./partials/page-footer.html"></include> 

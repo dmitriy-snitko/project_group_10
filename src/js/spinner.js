@@ -21,34 +21,40 @@ const opts = {
   className: 'spinner', // The CSS class to assign to the spinner
   position: 'absolute', // Element positioning
 };
-
+// спінер на moviesGallery
 const spinnerMovieListEl = document.querySelector('.movie-list');
 const spinner = new Spinner(opts).spin(spinnerMovieListEl);
 
-window.addEventListener('load', stopSpinner);
-
-export default function addSpinners() {
-    addSpinsMoviesItems();
-};
-
-function addSpinsMoviesItems() {
+export function stopSpinner() {
+    spinner.stop();
+}
+// спінер на li
+export function addSpinsMoviesItems() {
     const spinMoviesItemEl = document.querySelectorAll('.movie');
     spinMoviesItemEl.forEach(addSpinMoviesItem);
 };
 
 function addSpinMoviesItem(item) {
-    let spinnerItem = new Spinner({ ...opts, scale: 0.3, top: '30%', position: 'relative' }).spin(item);
-
-    setTimeout(() => {
+    const spinnerItem = new Spinner({ ...opts, scale: 0.3, top: '30%', position: 'relative' }).spin(item);
+    item.childNode[2].addEventLister('load', stopSpinner);
+    
+    function stopSpinner() {
         spinnerItem.stop();
-    }, 700);
+    };
 
 }
-function addSpinModalWindow() {
+
+
+// cпінер на модалку
+
+export function addSpinModalWindow() {
     const spinModalWindowEl = document.querySelectorAll('.cardfilm');
     const spinModalWindow = new Spinner(opts).spin(spinModalWindowEl);
+
+    spinModalWindow.childNode[2].addEventLister('load', stopSpinner);
+
+    function stopSpinner() {
+        spinner.stop();
+    }   
 }
 
-function stopSpinner() {
-    spinner.stop();
-}

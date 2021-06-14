@@ -1,0 +1,248 @@
+.backdropcard {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 200;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.25);
+  // opacity: 1;
+  &.is-hidden {
+    pointer-events: none;
+    opacity: 0;
+  }
+  &.is-open {
+    pointer-events: inherit;
+    opacity: 1;
+  }
+}
+.modal {
+  position: relative;
+  z-index: 1000;
+  left: 50%;
+  transform: translate(-50%);
+  width: 280px;
+  top: 20px;
+  background-color: var(--main-light-color);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    top: 231px;
+    width: 618px;
+  }
+  @media screen and (min-width: 1024px) {
+    top: 100px;
+    width: 882px;
+  }
+}
+.cardfilm {
+  margin-bottom: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+  padding-top: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+  @media screen and (min-width: 768px) {
+    padding-left: 28px;
+    padding-top: 42px;
+    // margin-right: 2px;
+    padding-right: 0px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-top: 50px;
+    padding-right: 0px;
+    padding-left: 30px;
+    margin-right: 0px;
+  }
+}
+.film-img {
+  border-radius: 5px;
+  @media screen and (min-width: 768px) {
+    width: 264px;
+    height: 373px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 396px;
+    height: 478px;
+  }
+}
+.film-details {
+  height: auto;
+  padding: 42px 20px 41px;
+  @media screen and (min-width: 768px) {
+    width: 264px;
+    padding-left: 32px;
+    padding-right: 0px;
+  }
+  @media screen and (min-width: 1024px) {
+    padding-top: 50px;
+    width: 396px;
+    padding-bottom: 102px;
+  }
+}
+.film-info {
+  margin-bottom: 20px;
+}
+.film-info-item {
+  display: flex;
+  margin-bottom: 10px;
+
+  & p:last-child {
+    max-width: 132px;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 156px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 244px;
+  }
+}
+.film-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.172;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+  @media screen and (min-width: 1024px) {
+    font-size: 30px;
+  }
+}
+.film-info-title {
+  width: 108px;
+  font-size: 12px;
+  line-height: 1.333;
+  font-weight: 500;
+  color: var(--secondary-text-color);
+  @media screen and (min-width: 1024px) {
+    width: 152px;
+  }
+}
+.film-info-vote {
+  display: flex;
+  font-size: 12px;
+  line-height: 1.172;
+  font-weight: 500;
+  color: var(--main-text-color);
+  & > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 16px;
+    border-radius: 5px;
+    background-color: var(--secondary-bg-color);
+    margin-top: -1px;
+  }
+  & > span:first-child {
+    color: var(--main-light-color);
+    background-color: var(--accent-color);
+  }
+}
+.film-info-popularity {
+  font-size: 12px;
+  line-height: 1.172;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+.film-info-genre-item {
+  font-size: 12px;
+  line-height: 1.172;
+  font-weight: 500;
+  color: var(--main-text-color);
+  &:last-child > span {
+    display: none;
+  }
+}
+.film-info-movie-name {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 1.333;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+.film-description-title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.333;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--main-text-color);
+}
+.film-description {
+  margin: 0;
+  margin-bottom: 21px;
+  font-size: 12px;
+  line-height: 1.667;
+  font-weight: 500;
+  color: var(--main-text-color);
+}
+.film-info-genre-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 132px;
+  @media screen and (min-width: 768px) {
+    max-width: 156px;
+  }
+  @media screen and (min-width: 1024px) {
+    max-width: 244px;
+  }
+}
+.film-btn-box {
+  display: flex;
+  justify-content: center;
+}
+.button-film-btn {
+  width: 112px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 1.333;
+  font-weight: 500;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid var(--main-text-color);
+  color: var(--main-text-color);
+  &:first-child {
+    margin-right: 15px;
+  }
+  &:hover {
+    color: var(--main-light-color);
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+  @media screen and (min-width: 768px) {
+    width: 125px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 136px;
+  }
+}
+.btn-esc {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+}
+.close-btn {
+  display: flex;
+  padding-right: 10px;
+  padding-top: 10px;
+
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.icon-close {
+  color: var(--main-text-color);
+  border: 2px;
+
+  // background-image: url('/images/icons/sprite.svg#icon-close');
+  // width: 30px;
+  // height: 30px;
+}

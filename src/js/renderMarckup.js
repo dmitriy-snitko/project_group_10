@@ -7,6 +7,8 @@ import { onSearchFailed } from './notifications';
 import { onError } from './notifications';
 
 export function renderMovieList(movieList) {
+  refs.movieList.insertAdjacentHTML('afterbegin', movieListMarckup(movieList));
+
   if (movieList.length === 0) {
     return onSearchFailed();
   }

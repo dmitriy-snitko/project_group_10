@@ -6,7 +6,6 @@
       modal: document.querySelector('[data-modal]'),
       body: document.querySelector('[data-body]'),
     };
-<<<<<<< Updated upstream
 
     refs.openModalBtn.addEventListener('click', isOpenModal);
     refs.backdrop.addEventListener('click',overlay);
@@ -38,16 +37,4 @@
       if (e.code === 'Escape') {
         isClosedModal();
       }
-=======
-  
-    refs.openModalBtn.addEventListener('click', toggleModal);
-    refs.closeModalBtn.addEventListener('click', toggleModal);
-  
-    function toggleModal() {
-      refs.modal.classList.toggle('is-hidden');
-      // refs.body.classList.toggle('scroll-lock');
->>>>>>> Stashed changes
-    }
-  })();
-
-
+  }})();

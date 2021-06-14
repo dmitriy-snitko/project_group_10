@@ -45,7 +45,7 @@
   @media screen and (min-width: 768px) {
     padding-left: 28px;
     padding-top: 42px;
-    margin-right: 2px;
+    // margin-right: 2px;
     padding-right: 0px;
   }
   @media screen and (min-width: 1024px) {
@@ -71,7 +71,7 @@
   padding: 42px 20px 41px;
   @media screen and (min-width: 768px) {
     width: 264px;
-    padding-left: 30px;
+    padding-left: 32px;
     padding-right: 0px;
   }
   @media screen and (min-width: 1024px) {
@@ -226,12 +226,11 @@
   position: absolute;
   right: 0;
   top: 0;
+  width: 30px;
+  height: 30px;
 }
 .close-btn {
   display: flex;
-  width: 30px;
-  height: 30px;
-
   padding-right: 10px;
   padding-top: 10px;
 
@@ -242,6 +241,7 @@
 .icon-close {
   color: var(--main-text-color);
   border: 2px;
+
   // background-image: url('/images/icons/sprite.svg#icon-close');
   // width: 30px;
   // height: 30px;

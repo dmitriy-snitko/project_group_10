@@ -1,6 +1,7 @@
 import modalTpl from '../templates/modalcard.hbs';
 import refs from './refs';
 import { movieApiService } from '../index';
+import sprite from '../images/icons/sprite.svg';
 
 function openModal() {
   refs.backdropmodal.classList.remove('is-hidden');
@@ -33,6 +34,7 @@ function modalLoad(id) {
 };
 
 function updateModalMarkup(evt) {
+  evt.sprite = sprite;
   const modalMarkup = modalTpl(evt);
   refs.modal.innerHTML = modalMarkup;
 };

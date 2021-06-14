@@ -1,3 +1,4 @@
+
 export default {
   movieList: document.querySelector('.movie-list'),
   header: document.querySelector('header'),
@@ -7,4 +8,5 @@ export default {
   btnClose: document.querySelector('.close-btn'),
   modalBox: document.querySelector('.modaljs'),
   openModalBtn: document.querySelector('.gallery-container'),
+  searchForm: document.querySelector('.search-form'),
 }

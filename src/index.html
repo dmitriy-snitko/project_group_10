@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Заголовок страницы</title>
+    <title>Filmoteka</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
@@ -11,10 +11,20 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="body">
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц.
     <include src="./partials/example.html"></include> -->
-    <header class="home-page-header"></header>
+    <header>
+      <div class="header"></div>
+        <form class="search-form" id="home-page-search-form">
+          <input class="search-form-input" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
+          <button type="submit" class="search-form-submit-btn">
+          <svg width="12px" height="12px">
+            <use href="./images/icons/sprite.svg#icon-search"></use>
+          </svg>
+          </button>
+        </form>
+    </header>
 
     <main>
       <div class="gallery-container container">
@@ -27,7 +37,8 @@
     </footer>
 
     <include src="./partials/backdrop.html"></include>
-    <include src="./partials/modalcard.html"></include>
+    <include src="./partials/modalcard.html"></include>      
+    </main>
 
     <script src="./index.js"></script>
   </body>

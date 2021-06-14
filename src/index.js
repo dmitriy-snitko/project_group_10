@@ -1,26 +1,21 @@
 import './sass/main.scss';
 
-import homePageHeaderMarckup from './templates/home-page-header.hbs';
 import MovieApiService from './js/movieApiService';
-import getMovieListWithGenresName from './js/getGenresName';
-import { renderMovieList, renderHeader } from './js/renderMarckup';
-// import modalStudents from './js/students-modal';
+import homePageHeaderMarckup from './templates/home-page-header.hbs';
+import { renderHomePage, renderHeader } from './js/renderMarckup';
 import refs from './js/refs';
 import { getCard, closeModal } from './js/modalcard';
+import { onPageHeaderClick } from './js/navigation';
+import { onSearch } from './js/search-movie';
+import './js/students-modal';
 
 export const movieApiService = new MovieApiService();
 
 renderHeader(homePageHeaderMarckup);
+renderHomePage();
 
-movieApiService
-  .fetchTrendingMovies()
-  .then(getMovieListWithGenresName)
-  .then(renderMovieList)
-  .catch(error => console.log(error));
-
-// modalStudents();
-
-// =======================================================================
+refs.header.addEventListener('click', onPageHeaderClick);
+refs.searchForm.addEventListener('submit', e => onSearch(e));
 
 refs.btnClose.addEventListener('click', closeModal);
 refs.backdropmodal.addEventListener('click', evt => {

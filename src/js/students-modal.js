@@ -4,7 +4,7 @@
       closeModalBtn: document.querySelector('[data-modal-close]'),
       backdrop: document.querySelector('.backdrop'),
       modal: document.querySelector('[data-modal]'),
-      body: document.querySelector('[data-body]'),
+      body: document.querySelector('body'),
     };
 
     refs.openModalBtn.addEventListener('click', isOpenModal);
@@ -14,9 +14,10 @@
 
     function isOpenModal(e) {
       e.preventDefault();
-    
+
       refs.backdrop.classList.add('is-open');
       refs.backdrop.classList.remove('is-hidden');
+      refs.body.classList.add('scroll-lock');
     
       window.addEventListener('keydown', onKeyPressEsc);
     }
@@ -24,6 +25,7 @@
     function isClosedModal(e) {
       refs.backdrop.classList.remove('is-open');
       refs.backdrop.classList.add('is-hidden');
+      refs.body.classList.remove('scroll-lock');
       
     }
     

@@ -13,6 +13,7 @@
     &.is-open{
       opacity: 1;
       pointer-events: initial;
+
   }
   
     &.is-hidden {
@@ -21,3 +22,8 @@
   
     }
   }
+
+  .scroll-lock {
+    overflow: hidden;
+  }
+  

@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "alertifyjs": "^1.13.1",
+    "animate.css": "^4.1.1",
     "axios": "^0.21.1"
   }
 }

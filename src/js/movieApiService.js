@@ -31,11 +31,11 @@ export default class MovieApiService {
       .then(({ data }) => data.genres);
   }
 
-  fetchTotalNumber() {
+  fetchTotalResults() {
     return axios
       .get(`/trending/movie/day?api_key=${API_KEY}&page=${this.page}`)
       .then(({ data }) => {
-        return data.total_pages;
+        return data.total_results;
       });
   }
 }

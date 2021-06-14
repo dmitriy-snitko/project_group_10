@@ -10,8 +10,10 @@
   display: flex;
   align-items: center;
   margin: auto;
+  justify-content: center;
 }
 
+.paginationjs-ellipsis,
 .paginationjs-page {
   padding-left: 8px;
   padding-right: 8px;
@@ -25,31 +27,46 @@
   list-style: none;
 }
 
+.paginationjs-page:hover,
+.paginationjs-page:focus {
+  font-size: 15px;
+}
+
 ul {
   list-style: none;
 }
 
 a {
-  list-style: none;
+  text-decoration: none;
   color: black;
 }
 
 .paginationjs-prev {
   background: #f7f7f7;
-  // background-image: url(/src/images/icons/sprite.svg#icon-arrow-left);
+  background-image: url(../images/icons/sprite.svg#icon-arrow-left);
+  background-repeat: no-repeat;
+  padding: 12px;
+}
+
+.paginationjs-next {
+  background: #f7f7f7;
+  background-image: url(../images/icons/sprite.svg#icon-arrow-right);
+  background-repeat: no-repeat;
+  padding: 12px;
 }
 
 .paginationjs-next {
   background: #f7f7f7;
 }
 
-.active {
+.active a {
   background: #ff6b08;
   border-radius: 5px;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 13px;
   padding-right: 13px;
+  color: var(--main-light-color);
 }
 
 .movie-list {

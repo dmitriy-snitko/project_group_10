@@ -10,13 +10,14 @@ export default function () {
         addEventListenerToButtonst();
     }
     const addEventListenerToButtonst = () => {
-        const btnWatched = document.queryCommandValue(".watched");
-        const btnQueue = document.queryCommandValue(".queue");
+        const btnWatched = document.querySelector(".buttonWatched");
+        const btnQueue = document.querySelector(".buttonQueue");
 
         btnWatched.addEventListener("click", () => render(libraryWatched('watched')));
         btnQueue.addEventListener("click", () => render(libraryWatched('queue')));
     }
 
+    
     function libraryWatched(listType) {
         const list = localStorage.getItem(listType);
         return JSON.parse(list)

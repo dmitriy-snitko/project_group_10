@@ -1,7 +1,7 @@
 
 export default {
   movieList: document.querySelector('.movie-list'),
-  header: document.querySelector('header'),
+  header: document.querySelector('.header'),
   modal: document.querySelector('.modal'),
   backdropmodal: document.querySelector('.backdropcard'),
   gallery: document.querySelector('.gallery-container'),

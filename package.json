@@ -27,6 +27,11 @@
   },
   "dependencies": {
     "alertifyjs": "^1.13.1",
-    "axios": "^0.21.1"
+    "axios": "^0.21.1",
+    "basiclightbox": "^5.0.4",
+    "jquery": "^3.6.0",
+    "pa": "^0.1.1",
+    "pagination": "^0.4.6",
+    "paginationjs": "^2.1.5"
   }
 }

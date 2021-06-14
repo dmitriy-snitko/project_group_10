@@ -1,4 +1,5 @@
 import './sass/main.scss';
+import './js/pagination';
 
 import homePageHeaderMarckup from './templates/home-page-header.hbs';
 import MovieApiService from './js/movieApiService';

@@ -16,28 +16,46 @@
     <include src="./partials/example.html"></include> -->
     <header>
       <div class="header"></div>
-        <form class="search-form" id="home-page-search-form">
-          <input class="search-form-input" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
-          <button type="submit" class="search-form-submit-btn">
+      <form class="search-form" id="home-page-search-form">
+        <input
+          class="search-form-input"
+          type="text"
+          name="query"
+          autocomplete="off"
+          placeholder="Поиск фильмов"
+        />
+        <button type="submit" class="search-form-submit-btn">
           <svg width="12px" height="12px">
             <use href="./images/icons/sprite.svg#icon-search"></use>
           </svg>
-          </button>
-        </form>
+        </button>
+      </form>
     </header>
 
-    <main>
+    <main class="main">
       <div class="container">
         <ul class="movie-list list"></ul>
       </div>
     </main>
+    <div class="film-btn-box">
+      <button
+        type="button"
+        class="button-watched-btn"
+        id="watchedModalBtn"
+        data-watched="addToList"
+      >
+        add to watched
+      </button>
+      <button type="button" class="button-queue-btn" id="queueModalBtn" data-queue="addToList">
+        add to queue
+      </button>
+    </div>
+    <footer>
+      <include src="./partials/page-footer.html"></include>
+    </footer>
 
-   <footer>
-    <include src="./partials/page-footer.html"></include> 
-   </footer> 
-    
-   <include src="./partials/backdrop.html"></include>
-   
+    <include src="./partials/backdrop.html"></include>
+
     <script src="./index.js"></script>
   </body>
 </html>

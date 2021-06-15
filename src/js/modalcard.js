@@ -4,7 +4,7 @@ import { movieApiService } from '../index';
 import sprite from '../images/icons/sprite.svg';
 
 import { stopSpinner, addSpinsMoviesItems } from '../js/spinner';
-import { addSpinModalWindow } from '../js/spinner';
+// import { addSpinModalWindow } from '../js/spinner';
 
 
 function openModal() {
@@ -29,7 +29,7 @@ export function getCard(event) {
   
   const movieId = event.target.dataset.id;
   modalLoad(movieId);  
-  stopSpinner();
+ stopSpinner();
 };
 
 

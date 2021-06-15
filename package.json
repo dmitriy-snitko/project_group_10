@@ -26,6 +26,11 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
-    "axios": "^0.21.1"
+    "alertifyjs": "^1.13.1",
+    "animate.css": "^4.1.1",
+    "axios": "^0.21.1",
+    "jquery": "^3.6.0",
+    "paginationjs": "^2.1.5",
+    "scroll-lock": "^2.1.5"
   }
 }

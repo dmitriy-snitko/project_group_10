@@ -1,27 +1,19 @@
 <!-- Home Page Header -->
-<div class="home-page-header-container container">
-    <div class="home-page-nav-container">
-        <a href="#" class="home-page-logo link" aria-label="Логотип сайта">
-            <svg class="home-page-logo-icon" width="24px" height="24px">
-                <use href="{{this}}#icon-film"></use>
+<div class="home-page-header container">
+    <nav class="navigation">
+        <a href="#" class="logo link" data-link="home" aria-label="Логотип сайта">
+            <svg class="logo-icon" data-link="home" width="24px" height="24px">
+                <use data-link="home" href="{{this}}#icon-film"></use>
             </svg>
-            <h1 class="home-page-logo-text">Filmoteka</h1>
+            <h1 class="logo-text" data-link="home">Filmoteka</h1>
         </a>
-        <ul class="home-page-nav-list list">
-            <li class="home-page-nav-list-item">
-                <a href="#" class="home-page-nav-link link current" id="home-link">HOME</a>
+        <ul class="navigation-list list">
+            <li class="navigation-item">
+                <a href="#" class="navigation-link link current" data-link="home">Home</a>
             </li>
-            <li class="home-page-nav-list-item">
-                <a href="" class="home-page-nav-link link">MY LIBRARY</a>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link link" data-link="lib">My library  </a>
             </li>
         </ul>
-    </div>
-    <form class="home-page-search-form" id="home-page-search-form">
-        <input class="home-page-search-input" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
-        <button type="submit" class="home-page-search-btn">
-            <svg class="home-page-search-btn-icon" width="12px" height="12px">
-                <use href="{{this}}#icon-search"></use>
-            </svg>
-        </button>
-    </form>
+    </nav>
 </div>

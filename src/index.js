@@ -12,7 +12,7 @@ import './js/students-modal';
 export const movieApiService = new MovieApiService();
 
 renderHeader(homePageHeaderMarckup);
-renderHomePage();
+renderHomePage()
 
 refs.header.addEventListener('click', onPageHeaderClick);
 refs.searchForm.addEventListener('submit', e => onSearch(e));

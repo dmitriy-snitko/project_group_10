@@ -16,7 +16,7 @@ export default class MovieApiService {
   };
 
   fetchMoviesByKeyWords(searchQuery) {
-    return axios.get(`search/movie?api_key=${API_KEY}&query=${searchQuery}&page=${this.page}`)
+    return axios.get(`/search/movie?api_key=${API_KEY}&query=${searchQuery}&page=${this.page}`)
       .then(({ data }) => data.results);
   }
 
@@ -29,4 +29,4 @@ export default class MovieApiService {
     return axios.get(`/genre/movie/list?api_key=${API_KEY}&language=en-US`)
     .then(({ data }) => data.genres);
   }
-}
+};

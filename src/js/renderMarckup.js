@@ -5,7 +5,7 @@ import getMovieListWithGenresName from './getGenresName';
 import refs from './refs';
 import { onSearchFailed } from './notifications';
 import { onError } from './notifications';
-import {pagination, url} from './pagination';
+import { pagination, url } from './pagination';
 
 export function renderMovieList(movieList) {
   refs.movieList.insertAdjacentHTML('afterbegin', movieListMarckup(movieList));
@@ -19,6 +19,7 @@ export function renderMovieList(movieList) {
 
 export function renderHeader(headerMarckup) {
   refs.header.innerHTML = headerMarckup(sprite);
+  
 }
 
 export function renderHomePage() {

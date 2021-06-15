@@ -5,6 +5,7 @@ import getMovieListWithGenresName from './getGenresName';
 import refs from './refs';
 import { onSearchFailed } from './notifications';
 import { onError } from './notifications';
+import {pagination, url} from './pagination';
 
 export function renderMovieList(movieList) {
   if (movieList.length === 0) {
@@ -19,8 +20,5 @@ export function renderHeader(headerMarckup) {
 }
 
 export function renderHomePage() {
-  movieApiService.fetchTrendingMovies()
-  .then(getMovieListWithGenresName)
-  .then(renderMovieList)
-  .catch(error => onError(error));
+  pagination(url.trendingMovie());
 }

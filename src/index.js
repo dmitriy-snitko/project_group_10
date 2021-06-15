@@ -1,12 +1,13 @@
 import './sass/main.scss';
 
-import homePageHeaderMarckup from './templates/home-page-header.hbs';
 import MovieApiService from './js/movieApiService';
-import { renderHeader, renderHomePage } from './js/renderMarckup';
-import './js/students-modal';
+import homePageHeaderMarckup from './templates/home-page-header.hbs';
+import { renderHomePage, renderHeader } from './js/renderMarckup';
 import refs from './js/refs';
+import { getCard, closeModal } from './js/modalcard';
 import { onPageHeaderClick } from './js/navigation';
 import { onSearch } from './js/search-movie';
+import './js/students-modal';
 
 export const movieApiService = new MovieApiService();
 
@@ -14,7 +15,18 @@ renderHeader(homePageHeaderMarckup);
 renderHomePage()
 
 refs.header.addEventListener('click', onPageHeaderClick);
-refs.searchForm.addEventListener('submit', onSearch)
+refs.searchForm.addEventListener('submit', e => onSearch(e));
 
+refs.btnClose.addEventListener('click', closeModal);
+refs.backdropmodal.addEventListener('click', evt => {
+  if (evt.target === evt.currentTarget) {
+    closeModal();
+  }
+});
+window.addEventListener('keydown', evt => {
+  if (evt.code === 'Escape' && !refs.backdropmodal.classList.contains('is-hidden')) {
+    closeModal();
+  }
+});
 
-
+refs.gallery.addEventListener('click', getCard);

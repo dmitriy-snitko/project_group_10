@@ -8,6 +8,8 @@ import { onError } from './notifications';
 import {pagination, url} from './pagination';
 
 export function renderMovieList(movieList) {
+  refs.movieList.insertAdjacentHTML('afterbegin', movieListMarckup(movieList));
+
   if (movieList.length === 0) {
     return onSearchFailed();
   }

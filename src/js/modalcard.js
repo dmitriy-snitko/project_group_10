@@ -12,7 +12,7 @@ function openModal() {
 export function closeModal() {
   refs.backdropmodal.classList.remove('is-open');
   refs.backdropmodal.classList.add('is-hidden');
-  refs.modalBox.innerHTML = '';
+  refs.modal.innerHTML = '';
 };
 
 export function getCard(event) {

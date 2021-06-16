@@ -7,10 +7,12 @@
   z-index: 200;
   overflow-y: scroll;
   background-color: rgba(0, 0, 0, 0.25);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   // opacity: 1;
   &.is-hidden {
     pointer-events: none;
     opacity: 0;
+    transform: translate(0, 0) scale(0);
   }
   &.is-open {
     pointer-events: inherit;
@@ -25,6 +27,7 @@
   width: 280px;
   top: 20px;
   background-color: var(--main-light-color);
+
   @media screen and (min-width: 768px) {
     display: flex;
     top: 231px;
@@ -216,6 +219,9 @@
     color: var(--main-light-color);
     background-color: var(--accent-color);
     border-color: var(--accent-color);
+
+    animation: pulse;
+    animation-duration: 1500ms;
   }
   @media screen and (min-width: 768px) {
     width: 125px;
@@ -243,6 +249,15 @@
 .icon-close {
   stroke: var(--main-text-color);
   border: 2px;
+
+  &:hover,
+  &:focus {
+    box-shadow: 2px 2px 2px 2px rgb(231, 113, 9);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    animation: heartBeat;
+    animation-duration: 1500ms;
+  }
 
   // background-image: url('/images/icons/sprite.svg#icon-close');
   // width: 30px;

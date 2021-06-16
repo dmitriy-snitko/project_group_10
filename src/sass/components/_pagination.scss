@@ -23,6 +23,12 @@
     height: 100%;
 
     color: black;
+
+    &:hover,
+    &:focus {
+      animation: pulse;
+      animation-duration: 1500ms;
+    }
   }
 
   & .active {
@@ -42,6 +48,12 @@
     align-items: center;
     justify-content: center;
     background-color: var(--secondary-bg-color);
+
+    &:hover,
+    &:focus {
+      animation: pulse;
+      animation-duration: 1500ms;
+    }
   }
 
   &-prev {

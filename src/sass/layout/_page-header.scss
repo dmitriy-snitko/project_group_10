@@ -78,9 +78,17 @@ header {
 
   &-list {
     display: flex;
+
+    animation: backInDown;
+    animation-duration: 1500ms;
   }
 
   &-item {
+    &:hover,
+    &:focus {
+      animation: heartBeat;
+      animation-duration: 1500ms;
+    }
     &:not(:last-child) {
       padding-right: 40px;
     }
@@ -115,6 +123,9 @@ header {
 .logo {
   display: flex;
   align-items: center;
+
+  animation: backInDown;
+  animation-duration: 1500ms;
 
   &-icon {
     transition: all 0.15s ease-in-out;
@@ -194,6 +205,8 @@ header {
     &:hover,
     &:focus {
       stroke-width: 5;
+      animation: heartBeat;
+      animation-duration: 1500ms;
     }
   }
 
@@ -243,6 +256,9 @@ header {
     &:hover,
     &:focus {
       background-color: rgba(255, 255, 255, 0.2);
+
+      animation: pulse;
+      animation-duration: 1500ms;
     }
   }
 

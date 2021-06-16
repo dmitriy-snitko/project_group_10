@@ -26,10 +26,6 @@ refs.backdropmodal.addEventListener('click', evt => {
   }
 });
 
-window.addEventListener('keydown', evt => {
-  if (evt.code === 'Escape' && !refs.backdropmodal.classList.contains('is-hidden')) {
-    closeModal();
-  }
-});
+
 
 refs.gallery.addEventListener('click', getCard);

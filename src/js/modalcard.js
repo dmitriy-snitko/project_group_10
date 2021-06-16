@@ -7,6 +7,8 @@ function openModal() {
   refs.backdropmodal.classList.remove('is-hidden');
   refs.backdropmodal.classList.add('is-open');
   refs.body.classList.add('scroll-lock');
+
+  window.addEventListener('keydown', onEscapeKeydown);
 };
 
 
@@ -15,6 +17,8 @@ export function closeModal() {
   refs.backdropmodal.classList.add('is-hidden');
   refs.body.classList.remove('scroll-lock');
   refs.modalBox.innerHTML = '';
+
+  window.removeEventListener('keydown', onEscapeKeydown);
 };
 
 export function getCard(event) {
@@ -49,3 +53,9 @@ refs.modal.addEventListener('click', e => {
     closeModal();
   }
 });
+
+function onEscapeKeydown(evt) {
+if (evt.code === 'Escape' && !refs.backdropmodal.classList.contains('is-hidden')) {
+    closeModal();
+  }
+}

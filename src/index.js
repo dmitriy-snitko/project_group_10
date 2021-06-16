@@ -26,6 +26,4 @@ refs.backdropmodal.addEventListener('click', evt => {
   }
 });
 
-
-
 refs.gallery.addEventListener('click', getCard);

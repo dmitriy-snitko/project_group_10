@@ -45,6 +45,7 @@ function updateModalMarkup(evt) {
   evt.sprite = sprite;
   const modalMarkup = modalTpl(evt);
   refs.modal.innerHTML = modalMarkup;
+
   truncateMovieText();
 };
 
@@ -63,6 +64,7 @@ function truncateMovieText() {
   });
   console.log(modalMovieTextEl);
 };
+
 
 refs.modal.addEventListener('click', e => {
   if (!e.target.dataset.btn) {

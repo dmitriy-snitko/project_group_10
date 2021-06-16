@@ -10,3 +10,4 @@ export default {
   openModalBtn: document.querySelector('.gallery-container'),
   searchForm: document.querySelector('.search-form'),
 }
+

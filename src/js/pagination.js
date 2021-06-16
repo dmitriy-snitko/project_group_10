@@ -1,5 +1,5 @@
 import '../../node_modules/paginationjs/dist/pagination';
-// import '../../node_modules/paginationjs/dist/pagination.css';
+import { onSearchFailed } from './notifications';
 import getGenresName from './getGenresName';
 import refs from './refs';
 import movieListMarckup from '../templates/moviesGallery.hbs';
@@ -22,8 +22,6 @@ export function pagination(url) {
   $('.pagination-container').pagination({
     dataSource: url,
     locator: 'results',
-    // showGoInput: true,
-    // showGoButton: true,
     totalNumberLocator: function (response) { return response.total_pages * 10 },
     alias: {
       pageNumber: 'page',
@@ -33,7 +31,11 @@ export function pagination(url) {
     nextText: '',
     
 
-  callback: function (data) {
+    callback: function (data) {
+    if (data.length === 0) {
+      return onSearchFailed();
+    }
+
     getGenresName(data)
       .then(() => refs.movieList.innerHTML = movieListMarckup(data));
     }

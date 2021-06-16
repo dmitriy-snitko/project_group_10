@@ -33,6 +33,7 @@
       if (event.target === refs.modal) {
       refs.backdrop.classList.remove('is-open');
       refs.backdrop.classList.add('is-hidden');
+      refs.body.classList.remove('scroll-lock');
     }}
 
     function onKeyPressEsc(e) {

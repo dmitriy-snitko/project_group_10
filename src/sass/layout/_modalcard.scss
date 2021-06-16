@@ -272,3 +272,23 @@
   // width: 30px;
   // height: 30px;
 }
+
+.cuttr__readmore {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid var(--main-text-color);
+  color: var(--accent-color);
+  @include font(12px, 500, 16px);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--main-light-color);
+    border: 1px solid var(--accent-color);
+
+    animation: pulse;
+    animation-duration: 1500ms;
+  }
+}

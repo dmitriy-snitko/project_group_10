@@ -2,6 +2,8 @@ import modalTpl from '../templates/modalcard.hbs';
 import refs from './refs';
 import { movieApiService } from '../index';
 import sprite from '../images/icons/sprite.svg';
+import Cuttr from 'Cuttr';
+
 
 function openModal() {
   refs.backdropmodal.classList.remove('is-hidden');
@@ -43,7 +45,24 @@ function updateModalMarkup(evt) {
   evt.sprite = sprite;
   const modalMarkup = modalTpl(evt);
   refs.modal.innerHTML = modalMarkup;
-}
+  truncateMovieText();
+};
+
+// Truncation function //
+
+function truncateMovieText() {
+  const modalMovieTextEl = document.querySelector('.film-description');
+  new Cuttr(modalMovieTextEl, {
+    truncate: 'words',
+    length: 100,
+    ending: '...',
+    readMore: true,
+    readMoreText: 'Read more',
+    readLessText: 'Read less',
+    readMoreBtnPosition: 'inside',
+  });
+  console.log(modalMovieTextEl);
+};
 
 refs.modal.addEventListener('click', e => {
   if (!e.target.dataset.btn) {
@@ -59,3 +78,4 @@ if (evt.code === 'Escape' && !refs.backdropmodal.classList.contains('is-hidden')
     closeModal();
   }
 }
+

@@ -8,6 +8,8 @@ import { getCard, closeModal } from './js/modalcard';
 import { onPageHeaderClick } from './js/navigation';
 import { onSearch } from './js/search-movie';
 import './js/students-modal';
+import 'animate.css';
+
 
 export const movieApiService = new MovieApiService();
 

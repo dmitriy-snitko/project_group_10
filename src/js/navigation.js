@@ -1,7 +1,9 @@
 import { renderHeader, renderHomePage} from './renderMarckup';
 import homePageHeaderMarckup from '../templates/home-page-header.hbs';
 import libraryHeaderMarckup from '../templates/library-header.hbs';
+import { pagination } from './pagination';
 import refs from './refs';
+
 
 export function onPageHeaderClick(e) {
   if (!e.target.dataset.link) {
@@ -15,6 +17,7 @@ export function onPageHeaderClick(e) {
   };
 
   if (e.target.dataset.link === 'lib') {
+    pagination('#');
     refs.movieList.innerHTML = '<li class="empty-lib">your library is empty</li>';
     refs.searchForm.classList.add('visually-hidden');
     renderHeader(libraryHeaderMarckup);

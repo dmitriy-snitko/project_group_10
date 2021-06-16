@@ -31,6 +31,7 @@
     "axios": "^0.21.1",
     "jquery": "^3.6.0",
     "paginationjs": "^2.1.5",
-    "scroll-lock": "^2.1.5"
+    "scroll-lock": "^2.1.5",
+    "cuttr": "^1.3.1"
   }
 }

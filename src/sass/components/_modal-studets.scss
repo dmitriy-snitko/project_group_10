@@ -1,133 +1,135 @@
-.modal{  
-    &-title{
-        margin-bottom: 15px;
-        text-align: center;
-        @media screen and (max-width: 767px) {
-            font-size: 20px;
-          }
-        @media screen and (min-width: 768px) {
-            font-size: 30px;
-          }
-     
+.modal {
+  &-title {
+    margin-bottom: 15px;
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      font-size: 20px;
     }
-    &-window {
-      background-image: url('../images/stutents/fon.jpg');
-        color: var(--footer-text-color);
-        position: absolute;
-        z-index: 1000;
-        left: 50%;
-        transform: translate( -50%);
-        margin-top: 20px;
-        margin-bottom: 20px;   
-        transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-        .backdrop.is-hidden & {
-          opacity: 0;
-          transform: translate(-50%, -50%);
-          transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
-        }
-      
-        @media screen and (max-height: 572px) {
-          transform: translate(-50%, 0);
-        }
-        @media screen and (max-width: 767px) {
-        padding: 20px;
+    @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }
+  }
+  &-window {
+    background-image: url('../images/stutents/fon.jpg');
+    color: var(--footer-text-color);
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
+    .backdrop.is-hidden & {
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 250ms;
     }
 
-        @media screen and (min-width: 768px) {
-          width: 618px;
-          padding: 30px;
-        }
-      }
+    @media screen and (max-height: 572px) {
+      transform: translate(-50%, 0);
+    }
+    @media screen and (max-width: 767px) {
+      padding: 20px;
+    }
 
-      &-close-btn {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 20px;
-        margin: 0;
-        padding: 0;
-        margin-left: auto;
-        margin-bottom: 10px;
-    
-        border: none;
-        background-color: transparent;
-        cursor: pointer;
-      }
-}
-
-.close-btn-icon {
-    stroke: var(--footer-text-color);
-
-    &:hover,
-    &:focus {
-        stroke: var(--accent-color);
+    @media screen and (min-width: 768px) {
+      width: 618px;
+      padding: 30px;
     }
   }
 
-  
-.project-team{
+  &-close-btn {
     display: flex;
-    flex-direction: row;
-    padding-top: 30px;
-    text-align: center;
     align-items: center;
+    justify-content: center;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+    margin-bottom: 10px;
 
-}
-
-
-.team-photo{
-    border-radius: 50%;
+    border: none;
+    background-color: transparent;
     cursor: pointer;
-    @media screen and (min-width: 768px) {
-        width: 200px;
-        margin-right: 100px;
-      }
-
-    @media screen and (max-width: 767px) {
-        width: 100px;
-        margin-right: 30px;
-      }
-
-      &:hover,
-      :focus{
-        background-color: var(--accent-color);
-        box-shadow: 37px 0px 31px -6px rgba(250, 118, 0, 0.38);
-        transition:  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-      }
+  }
 }
 
-.position-name{
-    padding-bottom: 10px;
-    color: var(--accent-color);
-    
-    @media screen and (min-width: 768px) {
-        font-size: 20px;
-      }
-    @media screen and (max-width: 767px) {
-        font-size: 17px;
-      }
+.close-btn-icon {
+  stroke: var(--footer-text-color);
+
+  &:hover,
+  &:focus {
+    stroke: var(--accent-color);
+    animation: heartBeat;
+    animation-duration: 1500ms;
+  }
 }
 
-.student-name{
-    @media screen and (min-width: 768px) {
-        font-size: 18px;
-      }
-    @media screen and (max-width: 767px) {
-        font-size: 14px;
-      }
+.project-team {
+  display: flex;
+  flex-direction: row;
+  padding-top: 30px;
+  text-align: center;
+  align-items: center;
 }
 
-.logo-github{
+.team-photo {
+  border-radius: 50%;
+  cursor: pointer;
+
+  @media screen and (min-width: 768px) {
+    width: 200px;
+    margin-right: 100px;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 100px;
+    margin-right: 30px;
+  }
+
+  &:hover,
+  :focus {
+    background-color: var(--accent-color);
+    box-shadow: 37px 0px 31px -6px rgba(250, 118, 0, 0.38);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    animation: tada;
+    animation-duration: 1500ms;
+  }
+}
+
+.position-name {
+  padding-bottom: 10px;
+  color: var(--accent-color);
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 17px;
+  }
+}
+
+.student-name {
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 14px;
+  }
+}
+
+.logo-github {
   width: 50px;
   height: 50px;
   margin-top: 15px;
   border-radius: 50%;
   fill: black;
   &:hover,
-  &:focus{
+  &:focus {
     fill: var(--accent-color);
     box-shadow: 15px 0px 15px -1px rgba(250, 118, 0, 0.38);
-    transition:  box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 

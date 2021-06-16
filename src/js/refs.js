@@ -9,5 +9,5 @@ export default {
   modalBox: document.querySelector('.modaljs'),
   openModalBtn: document.querySelector('.gallery-container'),
   searchForm: document.querySelector('.search-form'),
-}
-
+  body: document.querySelector('body'),
+};

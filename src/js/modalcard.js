@@ -8,12 +8,19 @@ import Cuttr from 'Cuttr';
 function openModal() {
   refs.backdropmodal.classList.remove('is-hidden');
   refs.backdropmodal.classList.add('is-open');
+  refs.body.classList.add('scroll-lock');
+
+  window.addEventListener('keydown', onEscapeKeydown);
 };
+
 
 export function closeModal() {
   refs.backdropmodal.classList.remove('is-open');
   refs.backdropmodal.classList.add('is-hidden');
-  refs.modal.innerHTML = '';
+  refs.body.classList.remove('scroll-lock');
+  refs.modalBox.innerHTML = '';
+
+  window.removeEventListener('keydown', onEscapeKeydown);
 };
 
 export function getCard(event) {
@@ -56,3 +63,19 @@ function truncateMovieText() {
   });
   console.log(modalMovieTextEl);
 };
+
+refs.modal.addEventListener('click', e => {
+  if (!e.target.dataset.btn) {
+    return;
+  }
+  if (e.target.dataset.btn === 'close') {
+    closeModal();
+  }
+});
+
+function onEscapeKeydown(evt) {
+if (evt.code === 'Escape' && !refs.backdropmodal.classList.contains('is-hidden')) {
+    closeModal();
+  }
+}
+

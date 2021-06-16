@@ -6,13 +6,15 @@ import sprite from '../images/icons/sprite.svg';
 function openModal() {
   refs.backdropmodal.classList.remove('is-hidden');
   refs.backdropmodal.classList.add('is-open');
-
+  refs.body.classList.add('scroll-lock');
 };
+
 
 export function closeModal() {
   refs.backdropmodal.classList.remove('is-open');
   refs.backdropmodal.classList.add('is-hidden');
-  refs.modal.innerHTML = '';
+  refs.body.classList.remove('scroll-lock');
+  refs.modalBox.innerHTML = '';
 };
 
 export function getCard(event) {
@@ -37,4 +39,13 @@ function updateModalMarkup(evt) {
   evt.sprite = sprite;
   const modalMarkup = modalTpl(evt);
   refs.modal.innerHTML = modalMarkup;
-};
+}
+
+refs.modal.addEventListener('click', e => {
+  if (!e.target.dataset.btn) {
+    return;
+  }
+  if (e.target.dataset.btn === 'close') {
+    closeModal();
+  }
+});

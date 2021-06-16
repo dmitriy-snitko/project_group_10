@@ -26,6 +26,7 @@
   transform: translate(-50%);
   width: 280px;
   top: 20px;
+  // bottom: 20px;
   background-color: var(--main-light-color);
 
   @media screen and (min-width: 768px) {
@@ -39,7 +40,7 @@
   }
 }
 .cardfilm {
-  margin-bottom: 30px;
+  margin-bottom: 30.43px;
   border-radius: 5px;
   overflow: hidden;
   padding-top: 48px;
@@ -60,22 +61,25 @@
 }
 .film-img {
   border-radius: 5px;
+  width: 240px;
+  height: 356.57px;
   object-fit: cover;
 
   @media screen and (min-width: 768px) {
     width: 264px;
-    height: 373px;
+    height: 373.55px;
   }
   @media screen and (min-width: 1024px) {
     width: 396px;
-    height: 478px;
+    height: 477.88px;
   }
 }
 .film-details {
   height: auto;
-  padding: 42px 20px 41px;
+  padding: 0px 20px 41px;
   @media screen and (min-width: 768px) {
-    width: 264px;
+    width: 296px;
+    padding-top: 42px;
     padding-left: 32px;
     padding-right: 0px;
   }
@@ -91,15 +95,8 @@
 .film-info-item {
   display: flex;
   margin-bottom: 10px;
-
   & p:last-child {
     max-width: 132px;
-  }
-  @media screen and (min-width: 768px) {
-    max-width: 156px;
-  }
-  @media screen and (min-width: 1024px) {
-    max-width: 244px;
   }
 }
 .film-title {
@@ -176,25 +173,37 @@
   font-weight: 500;
   text-transform: uppercase;
   color: var(--main-text-color);
+  @media screen and (min-width: 1024px) {
+    width: 396px;
+  }
 }
 .film-description {
   margin: 0;
   margin-bottom: 21px;
+  width: 240px;
   font-size: 12px;
   line-height: 1.667;
   font-weight: 500;
   color: var(--main-text-color);
+  @media screen and (min-width: 768px) {
+    margin-bottom: 20px;
+    width: 264px;
+  }
+  @media screen and (min-width: 1024px) {
+    width: 396px;
+    margin-bottom: 21px;
+  }
 }
 .film-info-genre-list {
   display: flex;
   flex-wrap: wrap;
   max-width: 132px;
-  @media screen and (min-width: 768px) {
-    max-width: 156px;
-  }
-  @media screen and (min-width: 1024px) {
-    max-width: 244px;
-  }
+  // @media screen and (min-width: 768px) {
+  //   max-width: 156px;
+  // }
+  // @media screen and (min-width: 1024px) {
+  //   max-width: 244px;
+  // }
 }
 .film-btn-box {
   display: flex;
@@ -230,20 +239,21 @@
     width: 136px;
   }
 }
-.btn-esc {
+.close-btn {
   position: absolute;
-  right: 0;
-  top: 0;
+  top: 10px;
+  right: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 30px;
   height: 30px;
-}
-.close-btn {
-  display: flex;
-  padding-right: 10px;
-  padding-top: 10px;
+  padding: 0;
 
   border: none;
   background-color: transparent;
+
   cursor: pointer;
 }
 .icon-close {

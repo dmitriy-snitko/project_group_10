@@ -2,7 +2,7 @@ import modalTpl from '../templates/modalcard.hbs';
 import refs from './refs';
 import { movieApiService } from '../index';
 import sprite from '../images/icons/sprite.svg';
-import Cuttr from 'Cuttr';
+import Cuttr from 'cuttr';
 
 
 function openModal() {

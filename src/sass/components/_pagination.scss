@@ -31,6 +31,12 @@
   @include font(12px, 500, 16px);
 
   color: black;
+
+  &:hover,
+  &:focus {
+    animation: pulse;
+    animation-duration: 1500ms;
+  }
 }
 
 .pagination-list .active a {
@@ -45,6 +51,12 @@
 .paginationjs-prev,
 .paginationjs-next {
   background-color: var(--secondary-bg-color);
+
+  &:hover,
+  &:focus {
+    animation: pulse;
+    animation-duration: 1500ms;
+  }
 }
 
 .paginationjs-prev {

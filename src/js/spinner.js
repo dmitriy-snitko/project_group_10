@@ -36,27 +36,13 @@ export function addSpinsMoviesItems() {
     spinMoviesItemEl.forEach(addSpinMoviesItem);
 };
 
-function addSpinMoviesItem(item) {
-    const spinnerItem = new Spinner({ ...opts, scale: 0.5, top: '20%', position: 'relative' }).spin(item);
-    item.spinnerItem.addEventLister('load', stopSpinner);
-    
-    function stopSpinner() {
-        spinnerItem.semove();
-    };
-
-}
-console.log(addSpinMoviesItem);
 
 // cпінер на модалку
 
-export function addSpinModalWindow() {
+export function addSpinnerModalWindow() {
     
-    const spinModalWindowEl = document.querySelector('.cardfilm');
-    const spinModalWindow = new Spinner({...opts, scale: 0.5, top: '20%'}).spin(spinModalWindowEl);
+    const spinnerModalWindowEl = document.querySelector('.cardfilm');
+    const spinnerModalWindow = new Spinner({...opts, scale: 0.5, top: '20%'}).spin(spinnerModalWindowEl);
 
-    spinModalWindowEl.addEventLister('load', stopSpinner);
-
-    function stopSpinner() {
-     spinModalWindow.stop();
-    }   
+    
 }

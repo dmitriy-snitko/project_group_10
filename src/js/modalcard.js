@@ -3,8 +3,7 @@ import refs from './refs';
 import { movieApiService } from '../index';
 import sprite from '../images/icons/sprite.svg';
 
-import { stopSpinner, addSpinsMoviesItems } from '../js/spinner';
-// import { addSpinModalWindow } from '../js/spinner';
+import { stopSpinner, addSpinnerModalWindow } from '../js/spinner';
 
 
 function openModal() {
@@ -28,15 +27,16 @@ export function getCard(event) {
   openModal();
   
   const movieId = event.target.dataset.id;
-  modalLoad(movieId);  
- stopSpinner();
+  modalLoad(movieId);
+ 
+ 
 };
 
 
 function modalLoad(id) {
   movieApiService.fetchMoviesById(id).then(evt => {
     updateModalMarkup(evt);
-    
+    addSpinnerModalWindow.stopSpinner()
   });
   
 };
@@ -45,5 +45,5 @@ function updateModalMarkup(evt) {
   evt.sprite = sprite;
   const modalMarkup = modalTpl(evt);
   refs.modal.innerHTML = modalMarkup;
-  addSpinsMoviesItems();
+  addSpinnerModalWindow();
 };

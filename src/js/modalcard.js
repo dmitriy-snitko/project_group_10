@@ -36,7 +36,7 @@ export function getCard(event) {
 function modalLoad(id) {
   movieApiService.fetchMoviesById(id).then(evt => {
     updateModalMarkup(evt);
-    addSpinnerModalWindow.stopSpinner()
+    stopSpinner();
   });
   
 };

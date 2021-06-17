@@ -43,6 +43,8 @@ export function addSpinnerModalWindow() {
     
     const spinnerModalWindowEl = document.querySelector('.cardfilm');
     const spinnerModalWindow = new Spinner({...opts, scale: 0.5, top: '20%'}).spin(spinnerModalWindowEl);
-
-    
+    setTimeout(function stopSpinner() {
+        spinnerModalWindow.stop();
+        console.log(stopSpinner);
+    }, 1000);
 }

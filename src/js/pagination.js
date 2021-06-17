@@ -37,7 +37,7 @@ export function pagination(url) {
     }
 
     getGenresName(data)
-      .then(() => refs.movieList.innerHTML = movieListMarckup(data));
+      .then(data => refs.movieList.innerHTML = movieListMarckup(data));
     }
   })
 }

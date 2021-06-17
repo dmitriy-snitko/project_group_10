@@ -5,32 +5,35 @@ import sprite from '../images/icons/sprite.svg';
 import Cuttr from 'cuttr';
 
 
+
 function openModal() {
   refs.backdropmodal.classList.remove('is-hidden');
   refs.backdropmodal.classList.add('is-open');
-  refs.body.classList.add('scroll-lock');
+  // refs.body.classList.add('scroll-lock');
 
   window.addEventListener('keydown', onEscapeKeydown);
 };
 
+export let movieId;
 
 export function closeModal() {
   refs.backdropmodal.classList.remove('is-open');
   refs.backdropmodal.classList.add('is-hidden');
-  refs.body.classList.remove('scroll-lock');
+  // refs.body.classList.remove('scroll-lock');
   refs.modalBox.innerHTML = '';
 
   window.removeEventListener('keydown', onEscapeKeydown);
 };
 
 export function getCard(event) {
+  event.target.parentElement.blur();
   event.preventDefault();
 
   if (event.target.nodeName !== 'IMG') {
     return;
   };
 
-  const movieId = event.target.dataset.id;
+  movieId = event.target.dataset.id;
   modalLoad(movieId);
   openModal();
 };
@@ -46,6 +49,20 @@ function updateModalMarkup(evt) {
   const modalMarkup = modalTpl(evt);
   refs.modal.innerHTML = modalMarkup;
 
+  const watchedList = JSON.parse(localStorage.getItem('watchedMovies')) || [];
+  const watchedMoviesId = watchedList.map(movie => String(movie.id));
+  if (watchedMoviesId.includes(movieId)) {
+    document.querySelector('#watchedMovies').textContent = "Remove from watched";
+    document.querySelector('#watchedMovies').classList.add('active');
+  }
+  
+  const queueList = JSON.parse(localStorage.getItem('queueMovies')) || [];
+  const queueMoviesId = queueList.map(movie => String(movie.id));
+  if (queueMoviesId.includes(movieId)) {
+    document.querySelector('#queueMovies').textContent = "Remove from queue";
+    document.querySelector('#queueMovies').classList.add('active');
+  }
+
   truncateMovieText();
 };
 
@@ -55,14 +72,13 @@ function truncateMovieText() {
   const modalMovieTextEl = document.querySelector('.film-description');
   new Cuttr(modalMovieTextEl, {
     truncate: 'words',
-    length: 100,
+    length: 82,
     ending: '...',
     readMore: true,
     readMoreText: 'Read more',
     readLessText: 'Read less',
     readMoreBtnPosition: 'inside',
   });
-  console.log(modalMovieTextEl);
 };
 
 

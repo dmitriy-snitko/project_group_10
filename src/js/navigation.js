@@ -38,6 +38,10 @@ export function onPageHeaderClick(e) {
   if (e.target.dataset.btn === 'lib-nav') {
     location = e.target.dataset.name;
     const libMovies = JSON.parse(localStorage.getItem(e.target.dataset.name)) || [];
+    
     refs.movieList.innerHTML = movieListMarckup(libMovies);
+    
+    const ratings = document.querySelectorAll('.movie-rating');
+    ratings.forEach(rating => rating.classList.remove('visually-hidden'))
   }  
 }

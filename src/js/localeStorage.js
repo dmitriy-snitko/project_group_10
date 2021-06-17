@@ -3,8 +3,6 @@ import MovieApiService from './movieApiService';
 import alertify from 'alertifyjs';
 import { renderMovieList } from './renderMarckup';
 import { location } from './navigation';
-// import { rating } from './renderMarckup';
-
 
 const movieApiService = new MovieApiService();
 

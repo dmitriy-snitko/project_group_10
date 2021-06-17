@@ -1,3 +1,27 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wraper {
+  min-height: 100%;
+  margin-bottom: -99px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: -76px;
+  }
+}
+
+footer,
+.push {
+  height: 100px;
+
+  @media screen and (min-width: 768px) {
+    height: 77px;
+  }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;

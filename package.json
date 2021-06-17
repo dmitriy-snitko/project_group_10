@@ -29,10 +29,10 @@
     "alertifyjs": "^1.13.1",
     "animate.css": "^4.1.1",
     "axios": "^0.21.1",
+    "basiclightbox": "^5.0.4",
     "cuttr": "^1.3.1",
     "jquery": "^3.6.0",
     "paginationjs": "^2.1.5",
-    "scroll-lock": "^2.1.5",
-    "cuttr": "^1.3.1"
+    "scroll-lock": "^2.1.5"
   }
 }

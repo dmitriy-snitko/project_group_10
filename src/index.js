@@ -8,6 +8,7 @@ import { getCard, closeModal } from './js/modalcard';
 import { onPageHeaderClick } from './js/navigation';
 import { onSearch } from './js/search-movie';
 import './js/students-modal';
+import './js/card-films-youtube';
 // import 'animate.css';
 
 

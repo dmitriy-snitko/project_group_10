@@ -1,5 +1,12 @@
 {{#each this}}
 <li class="movie">
+  <div class="btn-id">
+    <button data-id="{{id}}" class="btn-youtube">
+      <div class="overlay-btn-youtube-text" data-id="{{id}}">
+        <h2 class="btn-youtube-text">Film</h2>
+      </div>
+    </button>
+  </div>
   <a href="#" class="poster-wrap">
     {{#if this.poster_path}}
     <img class="movie-poster" data-id="{{id}}"

@@ -20,6 +20,7 @@ const opts = {
   zIndex: 2000000000, // The z-index (defaults to 2e9)
   className: 'spinner', // The CSS class to assign to the spinner
   position: 'absolute', // Element positioning
+  color: '#ff6b08',
   
 };
 // export const spinner = new Spinner(opts);
@@ -42,9 +43,9 @@ export function addSpinsMoviesItems() {
 export function addSpinnerModalWindow() {
     
     const spinnerModalWindowEl = document.querySelector('.cardfilm');
-    const spinnerModalWindow = new Spinner({...opts, scale: 0.5, top: '20%'}).spin(spinnerModalWindowEl);
+    const spinnerModalWindow = new Spinner({...opts, scale: 0.5, top: '40%'}).spin(spinnerModalWindowEl);
     setTimeout(function stopSpinner() {
         spinnerModalWindow.stop();
         console.log(stopSpinner);
-    }, 1000);
+    }, 500);
 }

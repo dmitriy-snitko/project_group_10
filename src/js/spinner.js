@@ -38,6 +38,7 @@ export function addSpinsMoviesItems() {
 };
 
 
+
 // cпінер на модалку
 
 export function addSpinnerModalWindow() {
@@ -46,6 +47,7 @@ export function addSpinnerModalWindow() {
     const spinnerModalWindow = new Spinner({...opts, scale: 0.5, top: '40%'}).spin(spinnerModalWindowEl);
     setTimeout(function stopSpinner() {
         spinnerModalWindow.stop();
-        console.log(stopSpinner);
+        // console.log(stopSpinner);
     }, 500);
+  
 }

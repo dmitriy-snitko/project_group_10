@@ -1,10 +1,9 @@
 import { renderHeader, renderHomePage} from './renderMarckup';
 import homePageHeaderMarckup from '../templates/home-page-header.hbs';
 import libraryHeaderMarckup from '../templates/library-header.hbs';
-import { pagination } from './pagination';
+import { paginationLib } from './pagination';
 import refs from './refs';
 import movieListMarckup from '../templates/moviesGallery.hbs'
-import getGenres from './getGenresName';
 
 export let location = '';
 let MoviesRating = [];
@@ -32,7 +31,7 @@ export function onPageHeaderClick(e) {
     
     MoviesRating = document.querySelectorAll('.movie-rating');
     MoviesRating.forEach(rating => rating.classList.remove('visually-hidden'));
-    pagination('#');
+    paginationLib(watchedMovies);
   };
 
   if (e.target.dataset.btn === 'lib-nav') {

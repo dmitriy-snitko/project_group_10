@@ -52,8 +52,8 @@ function checkMovie(movie, btnId, event) {
   if (movie.release_date) {
     movie.release_date = movie.release_date.slice(0, 4);
   }
-
-  movie.release_date = movie.release_date.slice(0, 4);
+  
+  movie.genres = movie.genres.slice(0, 3)
   movieList.push(movie);
   localStorage.setItem(btnId, JSON.stringify(movieList));
   event.target.innerText = `remove from ${event.target.dataset.name}`;

@@ -41,3 +41,14 @@ export function pagination(url) {
     }
   })
 }
+
+export function paginationLib(arr) {
+  $('.pagination-container').pagination({
+    dataSource: arr,
+    totalNumber: arr.length / 20,
+    ulClassName: 'pagination-list',
+    prevText: '',
+    nextText: '',
+    pageSize: 20,
+  })
+}

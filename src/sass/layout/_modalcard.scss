@@ -1,3 +1,9 @@
+.button-film-btn.active {
+  background-color: var(--accent-color);
+  color: #fff;
+  border: none;
+  opacity: 0.7;
+}
 .backdropcard {
   position: fixed;
 
@@ -28,7 +34,7 @@
   width: 280px;
   background-color: var(--main-light-color);
 
-  transition: transform 1000ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
   .backdropcard.is-hidden & {
     transform: translate(-50%, -50%) scale(0);
   }
@@ -212,10 +218,11 @@
   line-height: 1.333;
   font-weight: 500;
   text-transform: uppercase;
-  background-color: transparent;
+  background-color: #fff;
   border-radius: 5px;
   border: 1px solid var(--main-text-color);
   color: var(--main-text-color);
+  transition: all 0.2s ease-in-out;
   &:first-child {
     margin-right: 15px;
   }
@@ -223,9 +230,7 @@
     color: var(--main-light-color);
     background-color: var(--accent-color);
     border-color: var(--accent-color);
-
-    animation: pulse;
-    animation-duration: 1500ms;
+    opacity: 1;
   }
   @media screen and (min-width: 768px) {
     width: 125px;
@@ -274,7 +279,7 @@
   color: var(--accent-color);
   @include font(12px, 500, 16px);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {

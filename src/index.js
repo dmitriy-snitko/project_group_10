@@ -8,6 +8,7 @@ import { getCard, closeModal } from './js/modalcard';
 import { onPageHeaderClick } from './js/navigation';
 import { onSearch } from './js/search-movie';
 import './js/students-modal';
+import { onModalLocaleStorage } from './js/localeStorage';
 // import 'animate.css';
 
 export const movieApiService = new MovieApiService();
@@ -26,3 +27,11 @@ refs.backdropmodal.addEventListener('click', evt => {
 });
 
 refs.gallery.addEventListener('click', getCard);
+refs.modal.addEventListener('click', onModalLocaleStorage);
+
+
+// const a = [1, 2, 3, 4, 5, 6];
+// console.log(a);
+// a.splice(5, 1);
+
+// console.log(a);

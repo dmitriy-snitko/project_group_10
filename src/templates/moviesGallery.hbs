@@ -10,7 +10,8 @@
 
   <h2 class="movie-title">{{original_title}}</h2>
   <p class="movie-descrition">
-    {{#each genre_ids}}{{this}}, {{/each}}| {{release_date}}
+    {{#if this.genres}}{{#each genres}}{{this.name}}, {{/each}}| {{release_date}}
+    {{else}}{{#each genre_ids}}{{this}}, {{/each}}| {{release_date}}{{/if}}
     <span class="movie-rating visually-hidden">{{vote_average}}</span>
   </p>
 </li>

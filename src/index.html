@@ -13,34 +13,35 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
   </head>
   <body class="body">
-    <!-- Так добавляются фрагменты в главные HTML-файлы страниц.
-    <include src="./partials/example.html"></include> -->
-    <header>
-      <div class="header"></div>
+    <div class="wraper">
+      <header>
+        <div class="header"></div>
         <form class="search-form" id="home-page-search-form">
           <input class="search-form-input" type="text" name="query" autocomplete="off" placeholder="Поиск фильмов" />
           <button type="submit" class="search-form-submit-btn">
-          <svg width="12px" height="12px">
-            <use href="./images/icons/sprite.svg#icon-search"></use>
-          </svg>
+            <svg width="12px" height="12px">
+              <use href="./images/icons/sprite.svg#icon-search"></use>
+            </svg>
           </button>
         </form>
-    </header>
+      </header>
+      
+      <main>
+        <div class="gallery-container container">
+          <ul class="movie-list list"></ul>
+        </div>
+        <div class="pagination-container container"></div>
+        <include src="./partials/backdrop.html"></include>
+        <include src="./partials/modalcard.html"></include>
+      </main>
 
-    <main>
-      <div class="gallery-container container">
-        <ul class="movie-list list"></ul>
+      <div class="push"></div>
       </div>
-      <div class="pagination-container container"></div>
-    </main>
 
+      
     <footer>
       <include src="./partials/page-footer.html"></include>    
     </footer>
-
-    <include src="./partials/backdrop.html"></include>
-    <include src="./partials/modalcard.html"></include>      
-    </main>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./index.js"></script>

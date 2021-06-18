@@ -37,7 +37,18 @@ export function pagination(url) {
     }
 
     getGenresName(data)
-      .then(() => refs.movieList.innerHTML = movieListMarckup(data));
+      .then(data => refs.movieList.innerHTML = movieListMarckup(data));
     }
+  })
+}
+
+export function paginationLib(arr) {
+  $('.pagination-container').pagination({
+    dataSource: arr,
+    totalNumber: arr.length / 20,
+    ulClassName: 'pagination-list',
+    prevText: '',
+    nextText: '',
+    pageSize: 20,
   })
 }

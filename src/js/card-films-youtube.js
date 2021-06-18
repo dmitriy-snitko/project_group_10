@@ -16,12 +16,12 @@ function createFilmsLink(element) {
             .then(response => response.json())
             .then(data => {
                 const id = data.results[0].key;
-                const instance = basicLightbox.create(`iframe width="560" hight="315" src="https://www.youtube.com/embed/${id}'frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+                const instance = basicLightbox.create(`<iframe width="560" hight="315" src='https://www.youtube.com/embed/${id}' frameborder="0" allow="accelerometer" autoplay="1" encrypted-media gyroscope picture-in-picture allowfullscreen></iframe>`);
                 instance.show();
                 modalClBtnFilm(instance);   
             })
             .catch(() => {
-                const instance = basicLightbox.create(`<iframe width="560" hight="315" src='http://www.youtube.com/embed/zwBpUdZ0lrQ' frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
+                const instance = basicLightbox.create(`<iframe width="560" height="315" src="https://www.youtube.com/embed/3wizMwPZcjk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`);
                 instance.show();
                 modalClBtnFilm(instance);       
                 

@@ -10,7 +10,7 @@
 
   border: 0;
   outline: none;
-  background-image: url('../images/icons8-play-button-2.svg');
+  background-image: url('../../images/icons/icons-play-button.svg');
   background-color: transparent;
 }
 
@@ -53,52 +53,52 @@
   transform: translateX(-63%);
 }
 
-// .lightbox__button {
-//   position: fixed;
-//   top: 0;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   width: 50px;
-//   height: 50px;
-//   padding: 0;
-//   margin: 0;
-//   border: none;
-//   border-radius: 50%;
-//   background-color: transparent;
-//   color: #fff;
-//   cursor: pointer;
-//   transition: background-color 200ms ease-in-out;
-//   outline: none;
-//   background-image: url('../images/icon-close.svg');
-//   background-position: center;
-//   background-size: 60%;
-//   background-repeat: no-repeat;
-//   //   transition: all 300ms ease-in;
-// }
+.lightbox-button {
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out;
+  outline: none;
+  background-image: url('../../images/icons/sprite.svg#icon-close');
+  background-position: center;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  //   transition: all 300ms ease-in;
+}
 
-// .lightbox__button:hover,
-// .lightbox__button:focus {
-//   background-color: #ff6b08;
-// }
+.lightbox-button:hover,
+.lightbox-button:focus {
+  background-color: #ff6b08;
+}
 
-// @media screen and (min-width: 300px) and (max-width: 692px) {
-//   .lightbox__button {
-//     top: 90px;
-//     right: calc(((100vw - 324px) / 2));
-//   }
-// }
+@media screen and (min-width: 300px) and (max-width: 692px) {
+  .lightbox-button {
+    top: 90px;
+    right: calc(((100vw - 324px) / 2));
+  }
+}
 
-// @media screen and (min-width: 768px) {
-//   .lightbox__button {
-//     top: 100px;
-//     right: calc(((100vw - 668px) / 2));
-//   }
-// }
+@media screen and (min-width: 768px) {
+  .lightbox-button {
+    top: 100px;
+    right: calc(((100vw - 668px) / 2));
+  }
+}
 
-// @media screen and (min-width: 1024px) {
-//   .lightbox__button {
-//     top: 100px;
-//     right: calc(((100vw - 824px) / 2));
-//   }
-// }
+@media screen and (min-width: 1024px) {
+  .lightbox-button {
+    top: 100px;
+    right: calc(((100vw - 824px) / 2));
+  }
+}

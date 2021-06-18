@@ -37,11 +37,22 @@
 
       <div class="push"></div>
       </div>
-      <footer>
-        <include src="./partials/page-footer.html"></include>
-      </footer>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-      <script src="./index.js"></script>
-    
+
+      
+    <footer>
+      <include src="./partials/page-footer.html"></include>    
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./index.js"></script>
+
+<a  class="topbutton" href="#top" onclick="ScrollUp();return!1;">🡹</a>
+<script>
+function ScrollUp(){
+    var t,s;
+    s=document.body.scrollTop||window.pageYOffset;
+    t=setInterval(function(){if(s>0)window.scroll(0,s-=15);else clearInterval(t)},5);
+}
+</script>
   </body>
 </html>

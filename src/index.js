@@ -11,7 +11,6 @@ import './js/students-modal';
 import { onModalLocaleStorage } from './js/localeStorage';
 // import 'animate.css';
 
-
 export const movieApiService = new MovieApiService();
 
 renderHeader(homePageHeaderMarckup);

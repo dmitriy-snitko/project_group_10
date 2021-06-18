@@ -3,7 +3,7 @@ import refs from './refs';
 import { movieApiService } from '../index';
 import sprite from '../images/icons/sprite.svg';
 import Cuttr from 'cuttr';
-
+import { addSpinnerModalWindow } from '../js/spinner';
 
 
 function openModal() {
@@ -64,6 +64,7 @@ function updateModalMarkup(evt) {
   }
 
   truncateMovieText();
+  // addSpinnerModalWindow();
 };
 
 // Truncation function //

@@ -14,6 +14,4 @@ export function onSearch(e) {
   }
   
   pagination(url.searchMovie());
-
-  e.currentTarget.reset();
 }

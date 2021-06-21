@@ -5,7 +5,10 @@
     <img class="movie-poster" data-id="{{id}}"
       src="https://image.tmdb.org/t/p/w342{{poster_path}}"
       alt="{{original_title}}">
-    {{else}}{{/if}}
+    {{else}}
+    <img class="movie-poster" data-id="{{id}}" src="{{noPoster}}"
+      alt="{{original_title}}">
+      {{/if}}
   </a>
 
   <h2 class="movie-title">{{original_title}}</h2>

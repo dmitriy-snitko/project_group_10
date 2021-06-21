@@ -45,9 +45,9 @@ main {
   outline: none;
   overflow: hidden;
 
-  background-image: url('../images/gallary/no-poster.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url('../images/gallary/no-poster.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
 
   transition: transform 0.15s ease-in-out;
 
@@ -56,11 +56,11 @@ main {
     transform: scale(102%);
   }
 
-  @media screen and (min-device-pixel-ratio: 2),
-    screen and (min-resolution: 192dpi),
-    screen and (min-resolution: 2dppx) {
-    background-image: url('../images/gallary/no-poster@2x.jpg');
-  }
+  // @media screen and (min-device-pixel-ratio: 2),
+  //   screen and (min-resolution: 192dpi),
+  //   screen and (min-resolution: 2dppx) {
+  //   background-image: url('../images/gallary/no-poster@2x.jpg');
+  // }
 
   @media screen and (min-width: 768px) {
     width: 294px;

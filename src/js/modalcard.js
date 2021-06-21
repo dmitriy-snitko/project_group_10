@@ -3,7 +3,7 @@ import refs from './refs';
 import { movieApiService } from '../index';
 import sprite from '../images/icons/sprite.svg';
 import Cuttr from 'cuttr';
-import { addSpinnerModalWindow } from '../js/spinner';
+import noPoster from '../images/gallary/no-poster.jpg';
 
 
 function openModal() {
@@ -39,14 +39,15 @@ export function getCard(event) {
 };
 
 function modalLoad(id) {
-  movieApiService.fetchMoviesById(id).then(evt => {
-    updateModalMarkup(evt);
+  movieApiService.fetchMoviesById(id).then(movie => {
+    updateModalMarkup(movie);
   });
 };
 
-function updateModalMarkup(evt) {
-  evt.sprite = sprite;
-  const modalMarkup = modalTpl(evt);
+function updateModalMarkup(movie) {
+  movie.sprite = sprite;
+  movie.noPoster = noPoster;
+  const modalMarkup = modalTpl(movie);
   refs.modal.innerHTML = modalMarkup;
 
   const watchedList = JSON.parse(localStorage.getItem('watchedMovies')) || [];

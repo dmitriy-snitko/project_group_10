@@ -7,7 +7,12 @@
     </button>
   {{!-- </div> --}}
 <div class="cardfilm">
+  {{#if poster_path}}
   <img src="https://image.tmdb.org/t/p/w500/{{poster_path}}" alt="{{title}} film-poster" class="film-img">
+  {{else}}
+  <img src="{{noPoster}}" alt="{{title}} film-poster" class="film-img">
+  {{/if}}
+  
 </div>
 <div class="film-details">
   <h1 class="film-title">{{original_title}}</h1>

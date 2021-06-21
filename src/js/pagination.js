@@ -3,6 +3,7 @@ import { onSearchFailed } from './notifications';
 import getGenresName from './getGenresName';
 import refs from './refs';
 import movieListMarckup from '../templates/moviesGallery.hbs';
+import noPoster from '../images/gallary/no-poster.jpg';
 
 export const url = {
   BASE_URL: 'https://api.themoviedb.org/3',
@@ -36,8 +37,12 @@ export function pagination(url) {
       return onSearchFailed();
     }
 
-    getGenresName(data)
-      .then(data => refs.movieList.innerHTML = movieListMarckup(data));
+      getGenresName(data)
+        .then(movies => {
+          movies.forEach(movie => movie.noPoster = noPoster);
+          return movies;
+        })
+      .then(movies => refs.movieList.innerHTML = movieListMarckup(movies));
     }
   })
 }

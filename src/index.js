@@ -28,10 +28,3 @@ refs.backdropmodal.addEventListener('click', evt => {
 
 refs.gallery.addEventListener('click', getCard);
 refs.modal.addEventListener('click', onModalLocaleStorage);
-
-
-// const a = [1, 2, 3, 4, 5, 6];
-// console.log(a);
-// a.splice(5, 1);
-
-// console.log(a);

@@ -9,7 +9,7 @@ import { onPageHeaderClick } from './js/navigation';
 import { onSearch } from './js/search-movie';
 import './js/students-modal';
 import { onModalLocaleStorage } from './js/localeStorage';
-import 'animate.css';
+// import 'animate.css';
 
 export const movieApiService = new MovieApiService();
 
